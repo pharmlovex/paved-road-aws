@@ -135,6 +135,3 @@ Key decisions are recorded as ADRs in [`docs/adr/`](https://claude.ai/chat/docs/
 
 ---
 
-## Author
-
-Built by **Ifedayo Ojo**, full-stack engineer working towards platform engineering.
