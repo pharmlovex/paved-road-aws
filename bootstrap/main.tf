@@ -56,3 +56,19 @@ resource "aws_budgets_budget" "monthly" {
     subscriber_email_addresses = [var.budget_email]
   }
 }
+
+resource "aws_kms_key" "state" {
+  description             = "Encrypts OpenTofu state for paved-road"
+  enable_key_rotation     = true
+  deletion_window_in_days = 30
+
+  # If this key is ever deleted, every encrypted state file becomes unreadable forever.
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
+resource "aws_kms_alias" "state" {
+  name          = "alias/paved-road-tfstate"
+  target_key_id = aws_kms_key.state.key_id
+}
