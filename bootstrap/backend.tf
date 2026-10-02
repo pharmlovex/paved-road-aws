@@ -21,7 +21,7 @@ terraform {
     method "unencrypted" "migrate" {}
 
     state {
-      method = method.aes_gcm.state
+      method   = method.aes_gcm.state
       enforced = true
     }
 

@@ -14,7 +14,7 @@ This repository is a hands-on platform engineering project. It is built in phase
 | Phase                      | Scope                                                                                | Status     |
 | -------------------------- | ------------------------------------------------------------------------------------ | ---------- |
 | 1. Foundations             | Remote state, locking, state encryption, cost guardrails                             | ✅ Complete |
-| 2. Network                 | Reusable VPC module, dev environment                                                 | 🔜 Next    |
+| 2. Network                 | Reusable VPC module, dev environment                                                 | ✅ Complete |
 | 3. Service module          | ECS Fargate, ALB, RDS Postgres, Secrets Manager, CloudWatch                          | Planned    |
 | 4. Pipeline and guardrails | GitHub Actions with OIDC, plan on PR, policy checks, cost estimates, drift detection | Planned    |
 
