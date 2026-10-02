@@ -21,3 +21,8 @@ output "private_subnet_ids" {
 output "database_subnet_ids" {
   value = [for s in aws_subnet.database : s.id]
 }
+
+output "nat_public_ips" {
+  description = "Outbound IPs, useful when third parties need to allow-list you"
+  value       = [for eip in aws_eip.nat : eip.public_ip]
+}
