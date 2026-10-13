@@ -50,6 +50,7 @@ module "app_service" {
   # Placeholder; we choose the real test image in step 3.8.
   container_image = "nginxinc/nginx-unprivileged:1.27-alpine"
   container_port  = 8080
+  health_check_path = "/" # nginx placeholder has no /health; revert for the real app
 
   database_access = {
     security_group_id = module.postgres.security_group_id
