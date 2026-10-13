@@ -12,7 +12,7 @@ output "database_name" {
 }
 
 output "security_group_id" {
-  value = null
+  value = aws_security_group.this.id
 }
 
 output "master_user_secret_arn" {
